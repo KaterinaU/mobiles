@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "model": "Samsung Galaxy S23",
+    "manufacturer": "Samsung",
+    "releaseYear": 2023,
+    "price": 67000,
+    "countryOfOrigin": "South Korea",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.1 дюймов" },
+      { "name": "Объем памяти", "value": "128 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": true },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/samsung.png"
+  },
+  {
+    "id": 2,
+    "model": "iPhone 14",
+    "manufacturer": "Apple",
+    "releaseYear": 2022,
+    "price": 80000,
+    "countryOfOrigin": "USA",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.1 дюймов" },
+      { "name": "Объем памяти", "value": "128 GB" },
+      { "name": "Частота обновления экрана", "value": 60 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": true },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/iPhone.png"
+  },
+  {
+    "id": 3,
+    "model": "Google Pixel 8",
+    "manufacturer": "Google",
+    "releaseYear": 2023,
+    "price": 65000,
+    "countryOfOrigin": "USA",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.2 дюйма" },
+      { "name": "Объем памяти", "value": "128 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": true },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/pixel.png"
+  },
+  {
+    "id": 4,
+    "model": "OnePlus 11",
+    "manufacturer": "OnePlus",
+    "releaseYear": 2023,
+    "price": 75000,
+    "countryOfOrigin": "China",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.7 дюймов" },
+      { "name": "Объем памяти", "value": "256 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": false },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/onePlus.png"
+  },
+  {
+    "id": 5,
+    "model": "Xiaomi 13",
+    "manufacturer": "Xiaomi",
+    "releaseYear": 2023,
+    "price": 95000,
+    "countryOfOrigin": "China",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.36 дюймов" },
+      { "name": "Объем памяти", "value": "128 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": false },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/xiaomi.png"
+  },
+  {
+    "id": 6,
+    "model": "Sony Xperia 1 IV",
+    "manufacturer": "Sony",
+    "releaseYear": 2022,
+    "price": 109900,
+    "countryOfOrigin": "Japan",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.5 дюймов" },
+      { "name": "Объем памяти", "value": "256 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": false },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/sony.png"
+  },
+  {
+    "id": 7,
+    "model": "Huawei P50 Pro",
+    "manufacturer": "Huawei",
+    "releaseYear": 2021,
+    "price": 90000,
+    "countryOfOrigin": "China",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.6 дюймов" },
+      { "name": "Объем памяти", "value": "256 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": true },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/huawei.png"
+  },
+  {
+    "id": 8,
+    "model": "Oppo Find X5 Pro",
+    "manufacturer": "Oppo",
+    "releaseYear": 2022,
+    "price": 999,
+    "countryOfOrigin": "China",
+    "specs": [
+      { "name": "Диагональ экрана", "value": "6.7 дюймов" },
+      { "name": "Объем памяти", "value": "256 GB" },
+      { "name": "Частота обновления экрана", "value": 120 },
+      { "name": "Поддержка NFC", "value": true },
+      { "name": "Поддержка eSIM", "value": false },
+      { "name": "Поддержка беспроводной зарядки", "value": true }
+    ],
+    "imageUrl": "/images/oppoFind.png"
+  }
+]
