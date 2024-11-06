@@ -3,7 +3,7 @@ export type Phone = {
     model: string;               // Модель телефона
     manufacturer: string;        // Производитель
     releaseYear: number;         // Год выпуска
-    price: number;               // Стоимость в валюте (например, USD)
+    price: number;               // Стоимость 
     countryOfOrigin: string;     // Страна-производитель
     specs: Spec[];
 };
