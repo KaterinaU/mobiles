@@ -1,16 +1,24 @@
 export type Phone = {
-    id: number;                  // Уникальный идентификатор телефона
-    model: string;               // Модель телефона
-    manufacturer: string;        // Производитель
-    releaseYear: number;         // Год выпуска
-    price: number;               // Стоимость 
-    countryOfOrigin: string;     // Страна-производитель
-    specs: Spec[];
+  id: number; // Уникальный идентификатор телефона
+  name: string; // Название модели телефона
+  image: string; // Ссылка на изображение телефона
+  specs: Spec[]; // Массив характеристик
 };
-
-
 
 export type Spec = {
-    name: string;                        // Название характеристики (например, "Диагональ экрана")
-    value: string | number | boolean;    // Значение характеристики (например, "6.1 дюймов")
+  id: number; // Уникальный идентификатор характеристики для маппинга
+  name: TableRowName; // Название характеристики
+  value: string | number | boolean; // Значение характеристики
 };
+
+export type TableRowName =
+  | 'manufacturer'
+  | 'releaseYear'
+  | 'screenSize'
+  | 'country'
+  | 'memory'
+  | 'refreshRate'
+  | 'nfc'
+  | 'esim'
+  | 'inductive'
+  | 'price';
