@@ -1,11 +1,11 @@
-export type Phone = {
+export type PhoneType = {
   id: number; // Уникальный идентификатор телефона
   name: string; // Название модели телефона
   image: string; // Ссылка на изображение телефона
-  specs: Spec[]; // Массив характеристик
+  specs: PhoneSpecType[]; // Массив характеристик
 };
 
-export type Spec = {
+export type PhoneSpecType = {
   id: number; // Уникальный идентификатор характеристики для маппинга
   name: TableRowName; // Название характеристики
   value: string | number | boolean; // Значение характеристики
