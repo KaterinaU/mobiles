@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung Galaxy S23",
+    "image": "/images/samsung.png",
+    "specs": [
+      { "id": 101, "name": "manufacturer", "value": "Samsung" },
+      { "id": 102, "name": "releaseYear", "value": 2023 },
+      { "id": 103, "name": "screenSize", "value": "6.1 дюймов" },
+      { "id": 104, "name": "country", "value": "South Korea" },
+      { "id": 105, "name": "memory", "value": "128 GB" },
+      { "id": 106, "name": "refreshRate", "value": 120 },
+      { "id": 107, "name": "nfc", "value": true },
+      { "id": 108, "name": "esim", "value": true },
+      { "id": 109, "name": "inductive", "value": true },
+      { "id": 110, "name": "price", "value": 67000 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "iPhone 14",
+    "image": "/images/iPhone.png",
+    "specs": [
+      { "id": 201, "name": "manufacturer", "value": "Apple" },
+      { "id": 202, "name": "releaseYear", "value": 2022 },
+      { "id": 203, "name": "screenSize", "value": "6.1 дюймов" },
+      { "id": 204, "name": "country", "value": "USA" },
+      { "id": 205, "name": "memory", "value": "128 GB" },
+      { "id": 206, "name": "refreshRate", "value": 60 },
+      { "id": 207, "name": "nfc", "value": true },
+      { "id": 208, "name": "esim", "value": true },
+      { "id": 209, "name": "inductive", "value": true },
+      { "id": 210, "name": "price", "value": 80000 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Google Pixel 8",
+    "image": "/images/pixel.png",
+    "specs": [
+      { "id": 301, "name": "manufacturer", "value": "Google" },
+      { "id": 302, "name": "releaseYear", "value": 2023 },
+      { "id": 303, "name": "screenSize", "value": "6.2 дюйма" },
+      { "id": 304, "name": "country", "value": "USA" },
+      { "id": 305, "name": "memory", "value": "128 GB" },
+      { "id": 306, "name": "refreshRate", "value": 120 },
+      { "id": 307, "name": "nfc", "value": true },
+      { "id": 308, "name": "esim", "value": true },
+      { "id": 309, "name": "inductive", "value": true },
+      { "id": 310, "name": "price", "value": 65000 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "OnePlus 11",
+    "image": "/images/onePlus.png",
+    "specs": [
+      { "id": 401, "name": "manufacturer", "value": "OnePlus" },
+      { "id": 402, "name": "releaseYear", "value": 2023 },
+      { "id": 403, "name": "screenSize", "value": "6.7 дюймов" },
+      { "id": 404, "name": "country", "value": "China" },
+      { "id": 405, "name": "memory", "value": "256 GB" },
+      { "id": 406, "name": "refreshRate", "value": 120 },
+      { "id": 407, "name": "nfc", "value": true },
+      { "id": 408, "name": "esim", "value": false },
+      { "id": 409, "name": "inductive", "value": true },
+      { "id": 410, "name": "price", "value": 75000 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Xiaomi 13",
+    "image": "/images/xiaomi.png",
+    "specs": [
+      { "id": 501, "name": "manufacturer", "value": "Xiaomi" },
+      { "id": 502, "name": "releaseYear", "value": 2023 },
+      { "id": 503, "name": "screenSize", "value": "6.36 дюймов" },
+      { "id": 504, "name": "country", "value": "China" },
+      { "id": 505, "name": "memory", "value": "128 GB" },
+      { "id": 506, "name": "refreshRate", "value": 120 },
+      { "id": 507, "name": "nfc", "value": true },
+      { "id": 508, "name": "esim", "value": false },
+      { "id": 509, "name": "inductive", "value": true },
+      { "id": 510, "name": "price", "value": 95000 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sony Xperia 1 IV",
+    "image": "/images/sony.png",
+    "specs": [
+      { "id": 601, "name": "manufacturer", "value": "Sony" },
+      { "id": 602, "name": "releaseYear", "value": 2022 },
+      { "id": 603, "name": "screenSize", "value": "6.5 дюймов" },
+      { "id": 604, "name": "country", "value": "Japan" },
+      { "id": 605, "name": "memory", "value": "256 GB" },
+      { "id": 606, "name": "refreshRate", "value": 120 },
+      { "id": 607, "name": "nfc", "value": true },
+      { "id": 608, "name": "esim", "value": false },
+      { "id": 609, "name": "inductive", "value": true },
+      { "id": 610, "name": "price", "value": 109900 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Huawei P50 Pro",
+    "image": "/images/huawei.png",
+    "specs": [
+      { "id": 701, "name": "manufacturer", "value": "Huawei" },
+      { "id": 702, "name": "releaseYear", "value": 2021 },
+      { "id": 703, "name": "screenSize", "value": "6.6 дюймов" },
+      { "id": 704, "name": "country", "value": "China" },
+      { "id": 705, "name": "memory", "value": "256 GB" },
+      { "id": 706, "name": "refreshRate", "value": 120 },
+      { "id": 707, "name": "nfc", "value": true },
+      { "id": 708, "name": "esim", "value": true },
+      { "id": 709, "name": "inductive", "value": true },
+      { "id": 710, "name": "price", "value": 90000 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Oppo Find X5 Pro",
+    "image": "/images/oppoFind.png",
+    "specs": [
+      { "id": 801, "name": "manufacturer", "value": "Oppo" },
+      { "id": 802, "name": "releaseYear", "value": 2022 },
+      { "id": 803, "name": "screenSize", "value": "6.7 дюймов" },
+      { "id": 804, "name": "country", "value": "China" },
+      { "id": 805, "name": "memory", "value": "256 GB" },
+      { "id": 806, "name": "refreshRate", "value": 120 },
+      { "id": 807, "name": "nfc", "value": true },
+      { "id": 808, "name": "esim", "value": false },
+      { "id": 809, "name": "inductive", "value": true },
+      { "id": 810, "name": "price", "value": 99000 }
+    ]
+  }
+]

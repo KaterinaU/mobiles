@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+
+import { MainPage } from './pages/MainPage/MainPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+    </Routes>
   );
 }
 
