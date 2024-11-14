@@ -1,0 +1,99 @@
+/* Основной контейнер для таблицы */
+.phone-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Контейнер для шапки таблицы */
+.table-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Строка с картинками телефонов */
+.phone-images {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start; /* Выравниваем по левому краю */
+  gap: 20px; /* Отступ между картинками */
+}
+
+/* Пустая колонка для первой ячейки */
+.empty-column {
+  width: 20px; /* Отступ для первой колонки */
+}
+
+/* Контейнер для каждой картинки телефона */
+.phone-image-column {
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение */
+  justify-content: center; /* Центрируем картинку по вертикали */
+  align-items: center; /* Центрируем картинку по горизонтали */
+  width: 150px; /* Фиксированная ширина для колонки с картинками */
+  text-align: center;
+  flex-shrink: 0; /* Не сжимаем эти колонки */
+}
+
+/* Размер изображений */
+.phone-image {
+  width: 120px; /* Фиксированный размер картинок */
+  height: auto;
+  margin-bottom: 5px; /* Отступ между картинкой и названием */
+}
+
+/* Строка с чекбоксом и названиями телефонов */
+.phone-names {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start; /* Выравнивание по левому краю */
+  gap: 20px; /* Отступы между названиями телефонов */
+}
+
+/* Контейнер для названия телефона */
+.phone-name-column {
+  text-align: center;
+  font-weight: bold;
+  min-width: 150px; /* Минимальная ширина для колонки с названием телефона */
+  flex: 1; /* Равномерное распределение пространства */
+}
+
+/* Тело таблицы */
+.table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #F4F9FC;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Строка с данными */
+.table-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.spec-name {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 150px;
+}
+
+.spec-value {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  flex: 1;
+}
