@@ -1,99 +1,126 @@
-/* Основной контейнер для таблицы */
+// Переменные
+$primary-bg-color: #F4F9FC;
+$header-bg-color: #ffffff;
+$border-color: #CDCFD2;
+$font-color: #A4A9B9;
+$padding: 10px;
+$gap: 10px;
+$phone-image-size: 120px;
+$phone-image-column-width: 150px;
+$min-phone-name-column-width: 150px;
+$font-size: 16px;
+
+// Основной контейнер для таблицы
 .phone-table {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 10px;
-  padding: 20px;
+  gap: $gap;
   box-sizing: border-box;
+  background-color: $primary-bg-color;
 }
 
-/* Контейнер для шапки таблицы */
+// Контейнер для шапки таблицы
 .table-header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #ffffff;
-  padding: 10px;
+  background-color: $header-bg-color;
+  padding: $padding;
   box-sizing: border-box;
-  margin-bottom: 10px; /* Отступ снизу */
+  margin-bottom: $gap;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Строка с картинками телефонов */
+// Строка с картинками телефонов
 .phone-images {
   display: flex;
   width: 100%;
-  justify-content: flex-start; /* Выравниваем по левому краю */
-  gap: 20px; /* Отступ между картинками */
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-/* Пустая колонка для первой ячейки */
-.empty-column {
-  width: 20px; /* Отступ для первой колонки */
-}
-
-/* Контейнер для каждой картинки телефона */
+// Контейнер для каждой картинки телефона
 .phone-image-column {
   display: flex;
-  flex-direction: column; /* Вертикальное расположение */
-  justify-content: center; /* Центрируем картинку по вертикали */
-  align-items: center; /* Центрируем картинку по горизонтали */
-  width: 150px; /* Фиксированная ширина для колонки с картинками */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: $phone-image-column-width;
   text-align: center;
-  flex-shrink: 0; /* Не сжимаем эти колонки */
+  flex-shrink: 0;
 }
 
-/* Размер изображений */
+// Размер изображений
 .phone-image {
-  width: 120px; /* Фиксированный размер картинок */
+  width: $phone-image-size;
   height: auto;
-  margin-bottom: 5px; /* Отступ между картинкой и названием */
+  margin-bottom: 5px; // Отступ между картинкой и названием
 }
 
-/* Строка с чекбоксом и названиями телефонов */
+// Строка с чекбоксом и названиями телефонов
 .phone-names {
   display: flex;
   width: 100%;
-  justify-content: flex-start; /* Выравнивание по левому краю */
-  gap: 20px; /* Отступы между названиями телефонов */
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-/* Контейнер для названия телефона */
+.checkbox-column {
+  margin-top: auto;
+  text-align: center;
+}
+
+// Контейнер для названия телефона
 .phone-name-column {
   text-align: center;
   font-weight: bold;
-  min-width: 150px; /* Минимальная ширина для колонки с названием телефона */
-  flex: 1; /* Равномерное распределение пространства */
+  min-width: $min-phone-name-column-width;
+  flex: 1;
 }
 
-/* Тело таблицы */
+// Тело таблицы
 .table-body {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background-color: #F4F9FC;
+  gap: $gap;
+  background-color: $primary-bg-color;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  // Убираем нижнюю границу у последней строки
+  .table-row:last-child {
+    border-bottom: none;
+  }
+
+  .table-row {
+    display: flex;
+    gap: $gap;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    background-color: $primary-bg-color;
+  }
 }
 
-/* Строка с данными */
-.table-row {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
-
+// Название характеристики
 .spec-name {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
+  padding: $padding;
+  text-align: left;
   width: 150px;
+  color: $font-color;
 }
 
+// Значение характеристики
 .spec-value {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
+  padding: $padding;
+  margin-left: 160px;
+  text-align: left;
   flex: 1;
 }

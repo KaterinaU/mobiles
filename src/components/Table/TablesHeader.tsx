@@ -7,34 +7,27 @@ interface TablesHeaderProps {
 
 export const TablesHeader: React.FC<TablesHeaderProps> = ({ phones }) => {
   return (
-    <div className="table-header">
-      {/* Контейнер для картинок телефонов */}
-      <div className="phone-images">
-        {/* Пустая колонка для первой ячейки */}
-        <div className="empty-column"></div>
-
-        {/* Колонки с картинками телефонов */}
-        {phones.map((phone) => (
-          <div key={phone.id} className="phone-image-column">
-            <img src={phone.image} alt={phone.name} className="phone-image" />
-          </div>
-        ))}
+    <>
+      <div>
+        <div>Смартфоны</div>
+        <div>Отобразить товары: 2 3 4 5 6</div>
       </div>
+      <div className="table-header">
+        <div className="phone-names">
+          <div className="checkbox-column">
+            <input type="checkbox" id="showDifferences" />
+            <label htmlFor="showDifferences">Показать различия</label>
+          </div>
 
-      {/* Контейнер для названий телефонов */}
-      <div className="phone-names">
-        <div className="checkbox-column">
-          <input type="checkbox" id="showDifferences" />
-          <label htmlFor="showDifferences">Показать различия</label>
+          {phones.map((phone) => (
+            <div key={phone.id} className="phone-name-column">
+              <img src={phone.image} alt={phone.name} className="phone-image" />
+
+              <div>{phone.name}</div>
+            </div>
+          ))}
         </div>
-
-        {/* Колонки с названиями телефонов */}
-        {phones.map((phone) => (
-          <div key={phone.id} className="phone-name-column">
-            {phone.name}
-          </div>
-        ))}
       </div>
-    </div>
+    </>
   );
 };
