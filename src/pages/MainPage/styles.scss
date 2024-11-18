@@ -1,126 +1,15 @@
-// Переменные
-$primary-bg-color: #F4F9FC;
-$header-bg-color: #ffffff;
-$border-color: #CDCFD2;
-$font-color: #A4A9B9;
-$padding: 10px;
-$gap: 10px;
-$phone-image-size: 120px;
-$phone-image-column-width: 150px;
-$min-phone-name-column-width: 150px;
-$font-size: 16px;
+// Основной контейнер
+.main-page {
+  padding: 0 100px 0 100px ;
+}
 
-// Основной контейнер для таблицы
+// Контейнер для таблицы
 .phone-table {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: $gap;
+  gap: 10px;
   box-sizing: border-box;
-  background-color: $primary-bg-color;
 }
 
-// Контейнер для шапки таблицы
-.table-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: $header-bg-color;
-  padding: $padding;
-  box-sizing: border-box;
-  margin-bottom: $gap;
-  padding-left: 0;
-  padding-right: 0;
-}
 
-// Строка с картинками телефонов
-.phone-images {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-// Контейнер для каждой картинки телефона
-.phone-image-column {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: $phone-image-column-width;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-// Размер изображений
-.phone-image {
-  width: $phone-image-size;
-  height: auto;
-  margin-bottom: 5px; // Отступ между картинкой и названием
-}
-
-// Строка с чекбоксом и названиями телефонов
-.phone-names {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-.checkbox-column {
-  margin-top: auto;
-  text-align: center;
-}
-
-// Контейнер для названия телефона
-.phone-name-column {
-  text-align: center;
-  font-weight: bold;
-  min-width: $min-phone-name-column-width;
-  flex: 1;
-}
-
-// Тело таблицы
-.table-body {
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
-  background-color: $primary-bg-color;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
-
-  // Убираем нижнюю границу у последней строки
-  .table-row:last-child {
-    border-bottom: none;
-  }
-
-  .table-row {
-    display: flex;
-    gap: $gap;
-    width: 100%;
-    border-bottom: 1px solid $border-color;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
-    background-color: $primary-bg-color;
-  }
-}
-
-// Название характеристики
-.spec-name {
-  padding: $padding;
-  text-align: left;
-  width: 150px;
-  color: $font-color;
-}
-
-// Значение характеристики
-.spec-value {
-  padding: $padding;
-  margin-left: 160px;
-  text-align: left;
-  flex: 1;
-}

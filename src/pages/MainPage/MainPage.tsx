@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { PhoneType } from '../../types/main.types';
-import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { TablesHeader } from '../../components/Table/TablesHeader';
-import { TableBody } from '../../components/Table/TableBody';
+import { useEffect, useState } from 'react';
+
+import { Header } from '../../components/Header';
+import { TablesHeader } from '../../components/Table';
+import { TableBody } from '../../components/Table';
+import { PhoneType } from '../../types/main.types';
+
 import './styles.scss';
-import { Header } from '../../components/Header/Header';
 
 export const MainPage = () => {
   const [phones, setPhones] = useState<PhoneType[]>([]);
@@ -20,18 +22,28 @@ export const MainPage = () => {
         console.error('Ошибка при загрузке данных:', error);
       });
   }, []);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const displayedPhones = phones.slice(0, 3); // Отображаем только первые три телефона
+  const itemsPerPage = 3;
+
+  const totalPages = Math.ceil(phones.length / itemsPerPage);
+
+  const displayedPhones = phones.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <>
+    <div className="main-page">
       <div>
         <Header />
       </div>
       <div className="phone-table">
-        <TablesHeader phones={displayedPhones} />
+        <TablesHeader
+          phones={displayedPhones}
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
         <TableBody phones={displayedPhones} />
       </div>
-    </>
+    </div>
   );
 };
