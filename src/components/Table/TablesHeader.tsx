@@ -1,16 +1,26 @@
 import React from 'react';
+
 import { PhoneType } from '../../types/main.types';
+import { Pagination } from '../Pagination';
+
+import './tableStyles.scss';
 
 interface TablesHeaderProps {
   phones: PhoneType[];
+  totalPages: number;
+  currentPage: number;
+  setCurrentPage: (currentPage: number) => void;
 }
 
-export const TablesHeader: React.FC<TablesHeaderProps> = ({ phones }) => {
+export const TablesHeader: React.FC<TablesHeaderProps> = ({ phones, currentPage, totalPages, setCurrentPage }) => {
   return (
     <>
-      <div>
-        <div>Смартфоны</div>
-        <div>Отобразить товары: 2 3 4 5 6</div>
+      <div className="header-smart">
+        <div className="smart">Смартфоны</div>
+        <div className="pagination">
+          <div>Отобразить товары:</div>
+          <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
+        </div>
       </div>
       <div className="table-header">
         <div className="phone-names">
