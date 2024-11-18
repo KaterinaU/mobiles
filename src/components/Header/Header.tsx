@@ -1,6 +1,8 @@
 import * as React from 'react';
-import './styles.scss';
+
 import { Person } from '../../assets/icons/Person';
+
+import './headerStyles.scss';
 
 export const Header = () => {
   return (
