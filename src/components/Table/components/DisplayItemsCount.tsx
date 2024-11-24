@@ -1,5 +1,6 @@
 import React from 'react';
-import './paginationStyles.scss';
+
+import styles from '../../Pagination/paginationStyles.module.scss';
 
 export type PaginationType = {
   totalPages: number;
@@ -7,14 +8,14 @@ export type PaginationType = {
   onPageChange: (page: number) => void;
 };
 
-export const Pagination: React.FC<PaginationType> = ({ totalPages, currentPage, onPageChange }) => {
+export const DisplayItemsCount: React.FC<PaginationType> = ({ totalPages, currentPage, onPageChange }) => {
   return (
-    <div className="pagination-container">
+    <div className={styles.paginationContainer}>
       {[...Array(totalPages)].map((_, index) => (
         <span
           key={index}
           onClick={() => onPageChange(index + 1)}
-          className={`pagination-number ${currentPage === index + 1 ? 'active' : ''}`}
+          className={`${styles.paginationNumber} ${currentPage === index + 1 ? styles.active : ''}`}
         >
           {index + 1}
         </span>

@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { PhoneType } from '../../types/main.types';
-import { Pagination } from '../Pagination';
+import { DisplayItemsCount } from '../../Pagination';
 
-import './tableStyles.scss';
+import { PhoneType } from '../../../types';
+
+import styles from '../tableStyles.module.scss';
 
 interface TablesHeaderProps {
   phones: PhoneType[];
@@ -15,23 +16,23 @@ interface TablesHeaderProps {
 export const TablesHeader: React.FC<TablesHeaderProps> = ({ phones, currentPage, totalPages, setCurrentPage }) => {
   return (
     <>
-      <div className="header-smart">
-        <div className="smart">Смартфоны</div>
-        <div className="pagination">
+      <div className={styles.headerSmart}>
+        <div className={styles.smart}>Смартфоны</div>
+        <div className={styles.pagination}>
           <div>Отобразить товары:</div>
-          <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
+          <DisplayItemsCount totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
         </div>
       </div>
-      <div className="table-header">
-        <div className="phone-names">
-          <div className="checkbox-column">
+      <div className={styles.tableHeader}>
+        <div className={styles.phoneNames}>
+          <div className={styles.checkboxColumn}>
             <input type="checkbox" id="showDifferences" />
             <label htmlFor="showDifferences">Показать различия</label>
           </div>
 
           {phones.map((phone) => (
-            <div key={phone.id} className="phone-name-column">
-              <img src={phone.image} alt={phone.name} className="phone-image" />
+            <div key={phone.id} className={styles.phoneNamecolumn}>
+              <img src={phone.image} alt={phone.name} className={styles.phoneImage} />
 
               <div>{phone.name}</div>
             </div>

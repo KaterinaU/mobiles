@@ -1,2 +1,2 @@
-export { TablesHeader } from './TablesHeader';
-export { TableBody } from './TableBody';
+export { TablesHeader } from './components/TablesHeader';
+export { TableBody } from './components/TableBody';

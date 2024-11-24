@@ -2,12 +2,11 @@ import * as React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import { Header } from '../../components/Header';
-import { TablesHeader } from '../../components/Table';
-import { TableBody } from '../../components/Table';
-import { PhoneType } from '../../types/main.types';
+import { Table } from '../../components/Table/components/Table';
 
-import './styles.scss';
+import { PhoneType } from '../../types';
+
+import styles from './styles.module.scss';
 
 export const MainPage = () => {
   const [phones, setPhones] = useState<PhoneType[]>([]);
@@ -31,18 +30,14 @@ export const MainPage = () => {
   const displayedPhones = phones.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className="main-page">
-      <div>
-        <Header />
-      </div>
-      <div className="phone-table">
-        <TablesHeader
+    <div className={styles.mainPage}>
+      <div className={styles.phoneTable}>
+        <Table
           phones={displayedPhones}
           totalPages={totalPages}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <TableBody phones={displayedPhones} />
       </div>
     </div>
   );

@@ -1,1 +1,1 @@
-export { Pagination } from './Pagination';
+export { DisplayItemsCount } from '../Table/components/DisplayItemsCount';

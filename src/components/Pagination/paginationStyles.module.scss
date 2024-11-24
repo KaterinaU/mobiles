@@ -1,20 +1,20 @@
-.pagination-container {
+.paginationContainer {
   display: flex;
   gap: 8px; /* Отступ между номерами страниц */
 }
 
-.pagination-number {
+.paginationNumber {
   cursor: pointer;
   font-size: 18px;
   color: #0D5ADC;
   transition: color 0.3s ease;
+
+  &:hover {
+    color: #084a9c;
+  }
 }
 
-.pagination-number:hover {
-  color: #084a9c;
-}
-
-.pagination-number.active {
+.active {
   font-weight: bold;
   text-decoration: underline;
 }

@@ -10,7 +10,7 @@ $pagination-color: #0D5ADC;
 
 
 
-.header-smart {
+.headerSmart {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@ $pagination-color: #0D5ADC;
 
 
 // Контейнер для шапки таблицы
-.table-header {
+.tableHeader {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -45,7 +45,7 @@ $pagination-color: #0D5ADC;
 }
 
 
-.phone-images {
+.phoneImages {
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -53,7 +53,7 @@ $pagination-color: #0D5ADC;
 }
 
 
-.phone-image-column {
+.phoneImagecolumn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -64,28 +64,28 @@ $pagination-color: #0D5ADC;
 }
 
 
-.phone-image {
+.phoneImage {
   width: 120px;
   height: auto;
   margin-bottom: 5px; // Отступ между картинкой и названием
 }
 
 
-.phone-names {
+.phoneNames {
   display: flex;
   width: 100%;
   justify-content: flex-start;
   gap: 20px;
 }
 
-.checkbox-column {
+.checkboxColumn {
   margin-top: auto;
   text-align: center;
   color: #0D5ADC;
 }
 
 
-.phone-name-column {
+.phoneNamecolumn {
   text-align: center;
   font-weight: bold;
   min-width: 150px;
@@ -93,7 +93,7 @@ $pagination-color: #0D5ADC;
 }
 
 // Тело таблицы
-.table-body {
+.tableBody {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -105,11 +105,7 @@ $pagination-color: #0D5ADC;
   border-bottom: 1px solid $border-color;
 
 
-  .table-row:last-child {
-    border-bottom: none;
-  }
-
-  .table-row {
+  .tableRow {
     display: flex;
     gap: 10px;
     width: 100%;
@@ -117,11 +113,15 @@ $pagination-color: #0D5ADC;
     padding: 20px;
     box-sizing: border-box;
     background-color: $primary-bg-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
 
-.spec-name {
+.specName {
   padding: 10px;
   text-align: left;
   width: 150px;
@@ -129,7 +129,7 @@ $pagination-color: #0D5ADC;
 }
 
 
-.spec-value {
+.specValue {
   padding: 10px;
   margin-left: 160px;
   text-align: left;

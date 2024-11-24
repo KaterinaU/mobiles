@@ -1,23 +1,26 @@
 import React from 'react';
 
-import { PhoneType, TableRowName } from '../../types/main.types';
-import { Subtract_t } from '../../assets/icons/Subtract_t';
-import { Subtract_f } from '../../assets/icons/Subtract_f';
+import { PhoneType, PhoneSpecName } from '../../../types';
+
+import { SubtractT } from '../../../assets/icons/SubtractT';
+import { SubtractF } from '../../../assets/icons/SubtractF';
+
+import styles from '../tableStyles.module.scss';
 
 interface TableBodyProps {
   phones: PhoneType[];
 }
 
 export const TableBody: React.FC<TableBodyProps> = ({ phones }) => {
-  const getSpecValue = (specName: TableRowName, phone: PhoneType) => {
+  const getSpecValue = (specName: PhoneSpecName, phone: PhoneType) => {
     const spec = phone.specs.find((spec) => spec.name === specName);
     if (specName === 'nfc' || specName === 'esim' || specName === 'inductive') {
-      return spec?.value === true ? <Subtract_t /> : <Subtract_f />;
+      return spec?.value === true ? <SubtractT /> : <SubtractF />;
     }
     return spec ? spec.value : '';
   };
 
-  const specNamesMap: Record<TableRowName, string> = {
+  const specNamesMap: Record<PhoneSpecName, string> = {
     manufacturer: 'Производитель',
     releaseYear: 'Год релиза',
     screenSize: 'Диагональ экрана (дюйм)',
@@ -30,15 +33,15 @@ export const TableBody: React.FC<TableBodyProps> = ({ phones }) => {
     price: 'Стоимость',
   };
 
-  const specNames: TableRowName[] = Object.keys(specNamesMap) as TableRowName[];
+  const specNames: PhoneSpecName[] = Object.keys(specNamesMap) as PhoneSpecName[];
 
   return (
-    <div className="table-body">
+    <div className={styles.tableBody}>
       {specNames.map((specName) => (
-        <div key={specName} className="table-row">
-          <div className="spec-name">{specNamesMap[specName]}</div>
+        <div key={specName} className={styles.tableRow}>
+          <div className={styles.specName}>{specNamesMap[specName]}</div>
           {phones.map((phone) => (
-            <div key={phone.id} className="spec-value">
+            <div key={phone.id} className={styles.specValue}>
               {getSpecValue(specName, phone)}
             </div>
           ))}
