@@ -11,7 +11,7 @@ interface TableBodyProps {
   phones: PhoneType[];
 }
 
-export const TableBody: React.FC<TableBodyProps> = ({ phones }) => {
+export const TableBody = ({ phones }: TableBodyProps) => {
   const getSpecValue = (specName: PhoneSpecName, phone: PhoneType) => {
     const spec = phone.specs.find((spec) => spec.name === specName);
     if (specName === 'nfc' || specName === 'esim' || specName === 'inductive') {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Person } from '../../assets/icons/Person';
+import { Person } from '../../../../assets/icons/Person';
 
 import styles from './headerStyles.module.scss';
 

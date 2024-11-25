@@ -15,7 +15,7 @@ interface TableProps {
   setCurrentPage: (currentPage: number) => void;
 }
 
-export const Table: React.FC<TableProps> = ({ phones, totalPages, currentPage, setCurrentPage }) => {
+export const Table = ({ phones, totalPages, currentPage, setCurrentPage }: TableProps) => {
   return (
     <div className={styles.tableContainer}>
       <TablesHeader phones={phones} totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />

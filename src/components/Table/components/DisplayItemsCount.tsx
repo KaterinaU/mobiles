@@ -2,13 +2,13 @@ import React from 'react';
 
 import styles from '../../Pagination/paginationStyles.module.scss';
 
-export type PaginationType = {
+export type DisplayItemsCountType = {
   totalPages: number;
   currentPage: number;
   onPageChange: (page: number) => void;
 };
 
-export const DisplayItemsCount: React.FC<PaginationType> = ({ totalPages, currentPage, onPageChange }) => {
+export const DisplayItemsCount = ({ totalPages, currentPage, onPageChange }: DisplayItemsCountType) => {
   return (
     <div className={styles.paginationContainer}>
       {[...Array(totalPages)].map((_, index) => (

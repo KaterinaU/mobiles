@@ -7,6 +7,7 @@ import { Table } from '../../components/Table/components/Table';
 import { PhoneType } from '../../types';
 
 import styles from './styles.module.scss';
+import { PageContainer } from '../../components/Layout/components/Container/Container';
 
 export const MainPage = () => {
   const [phones, setPhones] = useState<PhoneType[]>([]);
@@ -30,15 +31,17 @@ export const MainPage = () => {
   const displayedPhones = phones.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className={styles.mainPage}>
-      <div className={styles.phoneTable}>
-        <Table
-          phones={displayedPhones}
-          totalPages={totalPages}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
+    <PageContainer>
+      <div className={styles.mainPage}>
+        <div className={styles.phoneTable}>
+          <Table
+            phones={displayedPhones}
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };

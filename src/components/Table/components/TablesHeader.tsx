@@ -13,7 +13,7 @@ interface TablesHeaderProps {
   setCurrentPage: (currentPage: number) => void;
 }
 
-export const TablesHeader: React.FC<TablesHeaderProps> = ({ phones, currentPage, totalPages, setCurrentPage }) => {
+export const TablesHeader = ({ phones, currentPage, totalPages, setCurrentPage }: TablesHeaderProps) => {
   return (
     <>
       <div className={styles.headerSmart}>
