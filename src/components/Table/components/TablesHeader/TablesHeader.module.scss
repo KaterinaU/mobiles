@@ -1,0 +1,89 @@
+
+.tableHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.phoneNames {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.phoneImages {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.checkboxColumn {
+  flex-basis: 300px;  /* Установите нужную ширину для этого столбца */
+  //flex-grow: 0;  /* Запрещает расширение */
+  margin-top: auto;
+  //flex: 1 1 0;
+  text-align: center;
+  color: #0D5ADC;
+}
+
+.phoneNamecolumn {
+/*  text-align: center;
+  font-weight: bold;
+  min-width: 150px;
+  flex: 1;*/
+/*  flex-basis: 150px;  !* Установите нужную ширину для столбца с изображением и названием *!
+  flex-grow: 0;*/
+  flex: 1 1 calc(100% / 8); /* Для 8 столбцов, можно будет менять в зависимости от itemsToShow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-right: 35px;
+}
+
+.phoneContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Chevron справа, но фиксированное расстояние */
+  //width: 100%; /* Устанавливаем ширину на 100% */
+}
+
+
+
+.phoneName {
+  margin-top: 5px; /* Отступ от изображения до названия */
+}
+
+
+.chevronWrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; /* Обеспечиваем фиксированный размер */
+  height: 20px; /* Обеспечиваем фиксированный размер */
+}
+
+.phoneImage {
+  width: 120px;
+  height: 230px;
+  margin-bottom: 10px;
+}
+.chevronIcon {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+

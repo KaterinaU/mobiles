@@ -1,15 +1,12 @@
-// Основной контейнер
 .mainPage {
-  padding: 0 100px 0 100px ;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-// Контейнер для таблицы
 .phoneTable {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-  box-sizing: border-box;
+  margin-top: 20px;
+
 }
 
 

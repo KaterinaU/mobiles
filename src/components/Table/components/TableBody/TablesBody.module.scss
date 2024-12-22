@@ -1,0 +1,49 @@
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #F4F9FCFF;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid  #CDCFD2;
+  border-bottom: 1px solid  #CDCFD2;
+
+
+  .tableRow {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid  #CDCFD2;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F4F9FCFF;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+
+.specName {
+ /* flex-basis: 200px;  !* Установите фиксированную ширину для названия характеристики *!
+  flex-grow: 0;*/
+  //flex: 1 1 calc(100% / 8); /* Пример: для 8 столбцов */
+  flex-basis: 200px;
+  padding: 10px 0;
+  text-align: left;
+  //width: 150px;
+  color: #A4A9B9;
+}
+
+
+.specValue {
+  padding: 10px;
+  //margin-left: 160px;
+  text-align: center;
+  /*flex-basis: 150px;
+  flex-grow: 0;*/
+  flex: 1 1 calc(100% / 8); /* Пример: для 8 столбцов */
+}
