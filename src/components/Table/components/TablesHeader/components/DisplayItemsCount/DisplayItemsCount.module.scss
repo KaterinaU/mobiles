@@ -1,0 +1,41 @@
+.headerSmart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //padding: 20px 0 20px 0;
+}
+
+.smart {
+  color: #828286;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #0D5ADC;
+  font-size: 18px;
+}
+
+.displayContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.displayNumber {
+  cursor: pointer;
+  font-size: 18px;
+  color: #0D5ADC;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #084a9c;
+  }
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
