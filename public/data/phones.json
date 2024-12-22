@@ -74,7 +74,7 @@
     "specs": [
       { "id": 501, "name": "manufacturer", "value": "Xiaomi" },
       { "id": 502, "name": "releaseYear", "value": 2023 },
-      { "id": 503, "name": "screenSize", "value": "6.36 дюймов" },
+      { "id": 503, "name": "screenSize", "value": "6.3 дюймов" },
       { "id": 504, "name": "country", "value": "China" },
       { "id": 505, "name": "memory", "value": "128 GB" },
       { "id": 506, "name": "refreshRate", "value": 120 },
