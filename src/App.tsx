@@ -1,21 +1,16 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 
 import { MainPage } from './pages/MainPage/MainPage';
 import { Layout } from './components/Layout/Layout';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Layout>
-            <MainPage />
-          </Layout>
-        }
-      />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </Layout>
   );
 }
 
