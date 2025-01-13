@@ -15,10 +15,17 @@ interface TableBodyProps {
 export const TableBody = ({ phones, showDifferences }: TableBodyProps) => {
   const getSpecValue = (specName: PhoneSpecName, phone: PhoneType) => {
     const spec = phone.specs.find((spec) => spec.name === specName);
+
     if (specName === 'nfc' || specName === 'esim' || specName === 'inductive') {
-      return spec?.value === true ? <SubtractT /> : <SubtractF />;
+      if (spec?.value === true) {
+        return { display: <SubtractT />, filter: 'true' };
+      } else if (spec?.value === false) {
+        return { display: <SubtractF />, filter: 'false' };
+      }
+      return { display: '', filter: '' };
     }
-    return spec ? spec.value : '';
+
+    return { display: spec?.value ?? '', filter: spec?.value ?? '' };
   };
 
   const specNamesMap: Record<PhoneSpecName, string> = {
@@ -38,7 +45,11 @@ export const TableBody = ({ phones, showDifferences }: TableBodyProps) => {
 
   const filterSpec = (specName: PhoneSpecName) => {
     if (showDifferences) {
-      const values = phones.map((phone) => getSpecValue(specName, phone));
+      const values = phones.map((phone) => {
+        const { filter } = getSpecValue(specName, phone);
+        return filter;
+      });
+
       return new Set(values).size > 1;
     }
     return true;
@@ -50,11 +61,14 @@ export const TableBody = ({ phones, showDifferences }: TableBodyProps) => {
         filterSpec(specName) ? (
           <div key={specName} className={styles.tableRow}>
             <div className={styles.specName}>{specNamesMap[specName]}</div>
-            {phones.map((phone) => (
-              <div key={phone.id} className={styles.specValue}>
-                {getSpecValue(specName, phone)}
-              </div>
-            ))}
+            {phones.map((phone) => {
+              const { display } = getSpecValue(specName, phone);
+              return (
+                <div key={phone.id} className={styles.specValue}>
+                  {display}
+                </div>
+              );
+            })}
           </div>
         ) : null,
       )}

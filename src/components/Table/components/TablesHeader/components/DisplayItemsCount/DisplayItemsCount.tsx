@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './DisplayItemsCount.module.scss';
 
@@ -9,7 +9,10 @@ export type DisplayItemsCountType = {
 };
 
 export const DisplayItemsCount = ({ onChange }: DisplayItemsCountType) => {
-  const handleButtonClick = (count: number) => {
+  const [activeCount, setActiveCount] = useState<number>(ITEMS_COUNT_OPTIONS[0]);
+
+  const createButtonClickHandler = (count: number) => () => {
+    setActiveCount(count);
     onChange(count);
   };
   return (
@@ -20,7 +23,11 @@ export const DisplayItemsCount = ({ onChange }: DisplayItemsCountType) => {
           <div>Отобразить товары:</div>
           <div className={styles.displayContainer}>
             {ITEMS_COUNT_OPTIONS.map((count) => (
-              <button key={count} className={styles.displayNumber} onClick={() => handleButtonClick(count)}>
+              <button
+                key={count}
+                className={`${styles.displayNumber} ${activeCount === count ? styles.active : ''}`}
+                onClick={createButtonClickHandler(count)}
+              >
                 {count}
               </button>
             ))}

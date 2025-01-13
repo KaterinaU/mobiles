@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 
 import { DisplayItemsCount } from './components/DisplayItemsCount';
+import { Chevron } from '../../../../assets/icons/Chevron';
 
 import { PhoneType } from '../../../../types';
 
 import styles from './TablesHeader.module.scss';
-import { Chevron } from '../../../../assets/icons/Chevron';
 
 interface TablesHeaderProps {
   phones: PhoneType[];
@@ -25,6 +25,15 @@ export const TablesHeader = ({
   setShowDifferences,
 }: TablesHeaderProps) => {
   const phoneColumnWidth = useMemo(() => `calc(100% / ${itemsToShow})`, [itemsToShow]);
+
+  const handleShowDifferencesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('Состояние изменено:', e.target.checked);
+    setShowDifferences(e.target.checked);
+  };
+
+  const handleChevronClick = (id: number) => () => {
+    onChevronClick(id);
+  };
   return (
     <>
       <DisplayItemsCount onChange={setItemsToShow} />
@@ -35,7 +44,7 @@ export const TablesHeader = ({
               type="checkbox"
               id="showDifferences"
               checked={showDifferences}
-              onChange={(e) => setShowDifferences(e.target.checked)} // Обработчик изменения состояния чекбокса
+              onChange={handleShowDifferencesChange}
             />
             <label htmlFor="showDifferences">Показать различия</label>
           </div>
@@ -44,7 +53,7 @@ export const TablesHeader = ({
             <div key={phone.id} className={styles.phoneNamecolumn} style={{ flexBasis: phoneColumnWidth }}>
               <div className={styles.phoneContent}>
                 <img src={phone.image} alt={phone.name} className={styles.phoneImage} />
-                <div className={styles.chevronWrapper} onClick={() => onChevronClick(phone.id)}>
+                <div id={`phone-${phone.id}`} className={styles.chevronWrapper} onClick={handleChevronClick(phone.id)}>
                   <Chevron className={styles.chevronIcon} />
                 </div>
               </div>
