@@ -1,16 +1,19 @@
 import React, { useState, useMemo } from 'react';
+import { useSelector } from 'react-redux';
 
 import { PhoneType } from '../../../../types';
 import { Vector } from '../../../../assets/icons/Vector';
+import { selectRemainingPhones } from '../../../../redux/slices/phone/phoneSlice';
 
 import styles from './PhoneReplaceContent.module.scss';
 
 interface PhoneReplaceContentProps {
-  phones: PhoneType[];
   onReplace: (selectedPhone: PhoneType) => void;
 }
 
-export const PhoneReplaceContent = ({ phones, onReplace }: PhoneReplaceContentProps) => {
+export const PhoneReplaceContent = ({ onReplace }: PhoneReplaceContentProps) => {
+  const phones = useSelector(selectRemainingPhones);
+
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredPhones = useMemo(() => {
@@ -37,8 +40,8 @@ export const PhoneReplaceContent = ({ phones, onReplace }: PhoneReplaceContentPr
       <div
         className={styles.phoneList}
         style={{
-          maxHeight: shouldShowScroll ? '300px' : 'auto', // Прокрутка появляется только если более 3 товаров
-          overflowY: shouldShowScroll ? 'auto' : 'visible', // Включаем прокрутку
+          maxHeight: shouldShowScroll ? '300px' : 'auto',
+          overflowY: shouldShowScroll ? 'auto' : 'visible',
         }}
       >
         {filteredPhones.map((phone) => (
