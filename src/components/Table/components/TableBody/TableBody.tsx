@@ -1,5 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
+import { selectDisplayedPhones } from '../../../../redux/slices/phone/phoneSlice';
 import { PhoneType, PhoneSpecName } from '../../../../types';
 
 import { SubtractT } from '../../../../assets/icons/SubtractT';
@@ -8,11 +10,11 @@ import { SubtractF } from '../../../../assets/icons/SubtractF';
 import styles from './TablesBody.module.scss';
 
 interface TableBodyProps {
-  phones: PhoneType[];
   showDifferences: boolean;
 }
 
-export const TableBody = ({ phones, showDifferences }: TableBodyProps) => {
+export const TableBody = ({ showDifferences }: TableBodyProps) => {
+  const phones = useSelector(selectDisplayedPhones);
   const getSpecValue = (specName: PhoneSpecName, phone: PhoneType) => {
     const spec = phone.specs.find((spec) => spec.name === specName);
 

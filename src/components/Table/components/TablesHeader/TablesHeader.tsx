@@ -1,33 +1,26 @@
 import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+
+import { selectDisplayedPhones, selectDisplayedPhonesCount } from '../../../../redux/slices/phone/phoneSlice';
 
 import { DisplayItemsCount } from './components/DisplayItemsCount';
 import { Chevron } from '../../../../assets/icons/Chevron';
 
-import { PhoneType } from '../../../../types';
-
 import styles from './TablesHeader.module.scss';
 
 interface TablesHeaderProps {
-  phones: PhoneType[];
-  setItemsToShow: (count: number) => void;
-  itemsToShow: number;
   onChevronClick: (id: number) => void;
   showDifferences: boolean;
   setShowDifferences: (value: boolean) => void;
 }
 
-export const TablesHeader = ({
-  phones,
-  itemsToShow,
-  setItemsToShow,
-  onChevronClick,
-  showDifferences,
-  setShowDifferences,
-}: TablesHeaderProps) => {
-  const phoneColumnWidth = useMemo(() => `calc(100% / ${itemsToShow})`, [itemsToShow]);
+export const TablesHeader = ({ onChevronClick, showDifferences, setShowDifferences }: TablesHeaderProps) => {
+  const displayedPhonesCount = useSelector(selectDisplayedPhonesCount);
 
+  const phones = useSelector(selectDisplayedPhones);
+
+  const phoneColumnWidth = useMemo(() => `calc(100% / ${displayedPhonesCount})`, [displayedPhonesCount]);
   const handleShowDifferencesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log('Состояние изменено:', e.target.checked);
     setShowDifferences(e.target.checked);
   };
 
@@ -36,7 +29,7 @@ export const TablesHeader = ({
   };
   return (
     <>
-      <DisplayItemsCount onChange={setItemsToShow} />
+      <DisplayItemsCount />
       <div className={styles.tableHeader}>
         <div className={styles.phoneNames}>
           <div className={styles.checkboxColumn}>
