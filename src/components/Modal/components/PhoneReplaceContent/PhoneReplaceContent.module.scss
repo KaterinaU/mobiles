@@ -1,0 +1,34 @@
+.searchContainer {
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.phoneItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  transition: background-color 0.2s;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+.phoneImage {
+  width: 40px;
+  margin: 0 15px;
+}
+
+
